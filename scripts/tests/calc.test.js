@@ -1,8 +1,13 @@
-const addition = require("/calc");
+const addition = require("./calc");
+
+//red test - will fail 
+// then green - just enough code to get test to pass 
 
 describe("Calculator", () => {
-    describe("Addtion Function", () => {
-
+    describe("Addition Function", () => {
+        test("should return 42 for 20 + 22", () => {
+            expect(addition(20, 22)).toBe(42);
+        })
     });
     describe("Subtract Function", () => {
 
